@@ -4,5 +4,5 @@
 void washington(int a)
 {
 	a+=1337;
-	printf("%s a=%d\n",__func__,a);
+	printf("%s a=%d\n", __func__, a);
 }

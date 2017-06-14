@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "header.h"
 #include "object.h"
 
@@ -8,18 +9,28 @@ void montreal()
 {
 	printf("%s\n", __func__);
 }
+
 void gatineau(int a)
 {
+	for (int i = 0; i < 30; i++) {
+		printf(".");
+	}
 	printf("%s a=%d\n", __func__, a);
 }
 
 void trois_riviere(int a, int b)
 {
+	for (int i = 0; i < 50; i++) {
+		printf(".");
+	}
 	printf("%s a=%d, b=%d\n", __func__, a,b);
 }
 
 void sherbrooke(int a, short b)
 {
+	for (int i = 0; i < 60; i++) {
+		printf(".");
+	}
 	printf("%s a=%d, b=%d\n", __func__, a,b);
 }
 
@@ -31,12 +42,17 @@ void victoriaville(int a, int b, char * c)
 static inline void saguenay(int a)
 {
 	a+=1212;
-	printf("%s a=%d\n", __func__,a);
+	printf("%s a=%d\n", __func__, a);
+}
+static inline int sorel(double a)
+{
+	printf("%s a=%f\n", __func__, a);
+	return a*a;
 }
 //inline int gaspe(int a)
 int gaspe(int a)
 {
-	printf("%s a=%d\n", __func__,a);
+	printf("%s a=%d\n", __func__, a);
 	return a*a;
 }
 
@@ -52,12 +68,13 @@ int main()
 	montreal();
 	gatineau(x);
 	trois_riviere(x,y);
-	victoriaville(x,y,z);
 	sherbrooke(1818, 1337);
-	gaspe(x);
+	victoriaville(x,y,z);
 	saguenay(x);
+	gaspe(x);
 	toronto(x*x);
 	washington(x*x);
+	sorel(12.2);
 
-	return 0;
+	return -10001;
 }

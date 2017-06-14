@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS=-g -Wall -O0
+CFLAGS=-g -Wall -fno-omit-frame-pointer
 
 all: main.c header.h object.o
 	$(CC) $(CFLAGS) -o main main.c object.o

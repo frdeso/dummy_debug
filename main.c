@@ -12,7 +12,8 @@ void montreal()
 
 void gatineau(int a)
 {
-	for (int i = 0; i < 30; i++) {
+	int i;
+	for (i = 0; i < 30; i++) {
 		printf(".");
 	}
 	printf("%s a=%d\n", __func__, a);
@@ -20,7 +21,8 @@ void gatineau(int a)
 
 void trois_riviere(int a, int b)
 {
-	for (int i = 0; i < 50; i++) {
+	int i;
+	for (i = 0; i < 30; i++) {
 		printf(".");
 	}
 	printf("%s a=%d, b=%d\n", __func__, a,b);
@@ -28,7 +30,8 @@ void trois_riviere(int a, int b)
 
 void sherbrooke(int a, short b)
 {
-	for (int i = 0; i < 60; i++) {
+	int i;
+	for (i = 0; i < 30; i++) {
 		printf(".");
 	}
 	printf("%s a=%d, b=%d\n", __func__, a,b);
